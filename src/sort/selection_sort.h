@@ -16,11 +16,11 @@ namespace cpp_algorithms {
 
         virtual ~SelectionSort() {}
 
-        std::vector <T> Sort(std::vector <T> &vector) override {
+        void Sort(std::vector <T> &vector) override {
             size_t n = vector.size();
-            for (int i = 0; i < n - 1; ++i) {
+            for (size_t i = 0; i < n - 1; ++i) {
                 size_t min = i;
-                for (int j = i + 1; j < n; ++j) {
+                for (size_t j = i + 1; j < n; ++j) {
                     if (vector[j] < vector[min]) {
                         min = j;
                     }
@@ -31,7 +31,6 @@ namespace cpp_algorithms {
                     list[min] = temp;
                 }
             }
-            return vector;
         }
     };
 }

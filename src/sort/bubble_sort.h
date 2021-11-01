@@ -18,10 +18,10 @@ namespace cpp_algorithms {
 
         virtual ~BubbleSort() {}
 
-        std::vector<T> Sort(std::vector<T> &vector) override {
+        void Sort(std::vector<T> &vector) override {
             size_t n = vector.size();
-            for (int j = 1; j < n; ++j) {
-                for (int i = 0; i < n - 1; ++i) {
+            for (size_t j = 1; j < n; ++j) {
+                for (size_t i = 0; i < n - 1; ++i) {
                     if (vector[i] > vector[i + 1]) {
                         T temp = vector[i];
                         vector[i] = vector[i + 1];
@@ -29,7 +29,6 @@ namespace cpp_algorithms {
                     }
                 }
             }
-            return vector;
         }
     };
 }

@@ -13,7 +13,7 @@ namespace cpp_algorithms {
     template<typename T>
     class SortingAlgo {
     public:
-        virtual std::vector<T> Sort(std::vector<T> &) = 0;
+        virtual void Sort(std::vector<T> &) = 0;
     };
 
 }

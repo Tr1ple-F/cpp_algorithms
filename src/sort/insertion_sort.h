@@ -18,9 +18,9 @@ namespace cpp_algorithms {
 
         virtual ~InsertionSort() {}
 
-        std::vector<T> Sort(std::vector<T> &vector) override {
+        void Sort(std::vector<T> &vector) override {
             size_t n = vector.size();
-            for (int i = 1; i < n; ++i) {
+            for (size_t i = 1; i < n; ++i) {
                 T key = vector[i];
                 size_t j = i - 1;
                 while (j >= 0 && vector[j] > key) {
@@ -29,7 +29,6 @@ namespace cpp_algorithms {
                 }
                 vector[j + 1] = key;
             }
-            return vector;
         }
     };
 }
