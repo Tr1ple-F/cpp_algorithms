@@ -15,7 +15,7 @@ namespace cpp_algorithms {
     class BinarySearch : public SearchingAlgo<T> {
     public:
         size_t Search(std::vector<T> &A, T x) {
-            return _BinarySearch(A, x, 0, A.size() - 1);
+            return _bSearch(A, x, 0, A.size() - 1);
         }
 
     private:
